@@ -5,7 +5,7 @@ from flask import Flask, request, jsonify
 from celery import Celery
 
 # Supondo que todos os outros módulos e classes necessárias foram importadas
-from  PPPwnGo.pppwn_exploit import *
+from  PPPwn.pppwn_exploit import *
 
 app = Flask(__name__)
 app.config['CELERY_BROKER_URL'] = 'redis://localhost:6379/0'
@@ -16,7 +16,7 @@ celery.conf.update(app.config)
 
 DEFAULT_INTERFACE = "enp1s0"
 
-def run_exploit(interface, firmware='1100', stage1='PPPwnGo/PS4_stage_bin_all/PS4-11.00/stage1/stage1.bin', stage2='PPPwnGo/PS4_stage_bin_all/PS4-11.00/stage2/stage2.bin'):
+def run_exploit(interface, firmware='1100', stage1='PPPwn/PS4_stage_bin_all/PS4-11.00/stage1/stage1.bin', stage2='PPPwn/PS4_stage_bin_all/PS4-11.00/stage2/stage2.bin'):
     # Leitura dos arquivos binários
     with open(stage1, mode='rb') as f:
         stage1_data = f.read()

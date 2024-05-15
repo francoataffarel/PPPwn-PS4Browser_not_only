@@ -2,8 +2,7 @@
 FROM docker:latest
 
 # Instala Python 3.8 e pip
-RUN apk add --no-cache python3 py3-pip
-
+RUN apk add --no-cache python3 py3-pip supervisor python3-dev pcre-dev supervisor bash
 # Define o diretório de trabalho no container
 WORKDIR /app
 
@@ -20,17 +19,23 @@ COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copie o restante dos arquivos da aplicação para o diretório de trabalho
-#COPY . /app/
+COPY app.py /app/
 COPY pppwn /usr/local/bin/pppwn
-COPY stage1.bin /data/stage1.bin
-COPY stage2.bin /data/stage2.bin
+COPY 1100/stage1.bin /data/stage1.bin
+COPY 1100/stage2.bin /data/stage2.bin
 
 # Expõe a porta que a aplicação Flask usará
 EXPOSE 3000
+
+# Configurar o Supervisor para gerenciar os processos
+
+COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
 
 # Define o comando para iniciar a aplicação
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 USER root
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["sh", "-c", ". /app/venv/bin/activate; flask run --host=0.0.0.0 --port=3000"]
+# Iniciar o Supervisor quando o container for iniciado
+CMD ["sh", "-c", "/usr/bin/supervisord -c /etc/supervisor/conf.d/supervisord.conf"]

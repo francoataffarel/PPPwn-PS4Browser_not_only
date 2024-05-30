@@ -71,13 +71,6 @@ Here’s a complete example of how you would do this:
     ```sh
     docker-compose up --build --remove-orphans
     ```
-
-2. **Stop and remove the containers and images**: After stopping the containers with `Ctrl + C`, run:
-
-    ```sh
-    docker container rm pppwn-ps4browser_not_only_web_1; docker image rm db5772a7ae68
-    ```
-
 Now you need to connect to the Wi-Fi network that will trigger via browser or curl.
 
 In the example, I'll show triggering via the host itself:
@@ -93,6 +86,17 @@ RESPONSE:
 ```
 
 But in the future, as soon as Sony authorizes, it will be directly in the PS4 browser. I promise.
+
+**Please Wait** Exploit will work!
+
+After PPPwed!! You can
+
+
+2. **Stop and remove the containers and images**: After stopping the containers with `Ctrl + C`, run:
+
+    ```sh
+    docker container rm pppwn-ps4browser_not_only_web_1; docker image rm db5772a7ae68
+    ```
 
 ## Interesting Notes
 

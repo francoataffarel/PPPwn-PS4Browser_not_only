@@ -97,7 +97,7 @@ After PPPwed!! You can
 2. **Stop and remove the containers and images**: After stopping the containers with `Ctrl + C`, run:
 
     ```sh
-    docker container rm pppwn-ps4browser_not_only_web_1; docker image rm db5772a7ae68
+    docker container rm pppwn-ps4browser_not_only_web_1; docker image rm pppwn-ps4browser_not_only_web:latest
     ```
 
 ## Interesting Notes

@@ -12,9 +12,12 @@ I started studying the possibility of triggering the exploit via the native PS4 
 
 **Using the built-in Wi-Fi hotspot on the PS4, created for remote play via PS VITA or PS TV.**
 
-Great idea, but I couldn't connect to the network. The simple question was: **what's the password?**
+Great idea, but I couldn't connect to the network. The simple question was: **What's the password?**
 
 **So I started tinkering with the PS4's file system after unlocking it. After three intense weekends, I developed a methodology to discover the password.**
+
+**I was able to connect  a built-in Wi-Fi hotspot WITHOUT PS VITA and use this network to trigger an exploit in the native PS4 browser (WWW app)!!!**
+
 
 **Note: I won't disclose this part yet because Sony states:
 'Give us reasonable time to remediate vulnerabilities before talking about them publicly and notify us of your disclosure plans in advance.'

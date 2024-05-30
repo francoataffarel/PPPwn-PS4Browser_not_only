@@ -4,8 +4,6 @@ services:
     build: .
     privileged: true
     network_mode: host
-    ports:
-      - "80:3000"
     environment:
       - FLASK_APP=app.py
       - FLASK_ENV=development

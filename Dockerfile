@@ -25,9 +25,6 @@ COPY pppwn /usr/local/bin/pppwn
 COPY 1100/stage1.bin /app/data/stage1.bin
 COPY 1100/stage2.bin /app/data/stage2.bin
 
-# Expõe a porta que a aplicação Flask usará
-EXPOSE 80
-
 # Configurar o Supervisor para gerenciar os processos
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf

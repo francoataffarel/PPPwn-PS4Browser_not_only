@@ -35,6 +35,8 @@ Please wait! Meanwhile, the steps below can help you trigger the vulnerability v
 
 I prepared a Docker setup with everything you need to perform the jailbreak. While waiting for Sony to authorize my report, let's use the browser or curl.
 
+!!!!**IMPORTANT!!! Docker uses port 80 in host mode connected directly interface from host***
+
 You need a system to trigger the exploit, whether it's Windows, Raspberry Pi, or something else, but I believe you need at least the following hardware requirements:
 
 - Router

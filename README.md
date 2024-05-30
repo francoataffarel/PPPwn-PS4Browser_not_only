@@ -48,7 +48,7 @@ So all you need is to have Docker Compose installed, and the script will handle 
 
 ```sh
 sudo apt-get update 
-sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker docker-clean docker-compose docker-doc docker-registry docker.io docker2aci
+sudo apt-get install -y docker docker-clean docker-compose docker-doc docker-registry docker.io docker2aci
 ```
 
 Downloading the repository:

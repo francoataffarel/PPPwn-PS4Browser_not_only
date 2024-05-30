@@ -7,6 +7,6 @@ sleep 5
 
 # Executar o Redis em background
 docker run -d -p 6379:6379 -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker redis
-
+chmod +rx /usr/local/bin/pppwn
 # Comando original para manter o contêiner rodando
 exec "$@"

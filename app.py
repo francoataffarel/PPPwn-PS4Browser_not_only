@@ -16,7 +16,7 @@ celery.conf.update(app.config)
 HTML = """
 <html>
 <head>
-<title>PPPwn-Flask Jailbreak</title>
+<title>PPPwn-PS4Browser_not_only</title>
 </head>
 <body>
     <h1>PPPwn Jailbreak via WWW-App PS4</h1>

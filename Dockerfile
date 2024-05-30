@@ -1,3 +1,4 @@
+
 # Use a versão mais recente de Docker DinD como base
 FROM docker:latest
 
@@ -21,11 +22,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copie o restante dos arquivos da aplicação para o diretório de trabalho
 COPY app.py /app/
 COPY pppwn /usr/local/bin/pppwn
-COPY 1100/stage1.bin /data/stage1.bin
-COPY 1100/stage2.bin /data/stage2.bin
+COPY 1100/stage1.bin /app/data/stage1.bin
+COPY 1100/stage2.bin /app/data/stage2.bin
 
 # Expõe a porta que a aplicação Flask usará
-EXPOSE 3000
+EXPOSE 80
 
 # Configurar o Supervisor para gerenciar os processos
 

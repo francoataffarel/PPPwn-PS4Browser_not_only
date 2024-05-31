@@ -38,7 +38,7 @@ Please wait! Meanwhile, the steps below can help you trigger the vulnerability v
 
 I prepared a Docker setup with everything you need to perform the jailbreak. While waiting for Sony to authorize my report, let's use the browser or curl.
 
-!!!!**IMPORTANT!!! Docker uses port 80 in host mode connected directly interface from host***
+**!!!!IMPORTANT!!!! Docker uses port 80 in host mode connected directly interface from host***
 
 You need a system to trigger the exploit, whether it's Windows, Raspberry Pi, or something else, but I believe you need at least the following hardware requirements:
 
@@ -47,7 +47,7 @@ You need a system to trigger the exploit, whether it's Windows, Raspberry Pi, or
 - Wi-Fi Network Card (used to trigger the vulnerability via browser or curl)
 - Ethernet Network Card (used to send the exploit data **'PPPwn', TheOfficialFlow**)
 
-It's quite simple; we'll use a Flask application that uses Redis and Celery to execute the exploit and send malicious data to the PS4 via Ethernet.
+It's quite simple; we'll use a Flask application to execute the exploit and send malicious data to the PS4 via Ethernet.
 
 So all you need is to have Docker Compose installed, and the script will handle the rest. The example below is for a Debian x64 Linux and these are the official requirements:
 
@@ -79,16 +79,20 @@ Here’s a complete example of how you would do this:
 Now you need to connect to the Wi-Fi network that will trigger via browser or curl.
 
 In the example, I'll show triggering via the host itself:
+First, make sure your Flask app is running as configured. Then you can use the following curl command to start the task:
 
-REQUEST: 
+REQUEST:
 ```sh
-curl -X POST http://localhost/start_exploit
+curl -vvv -X POST http://localhost/start_exploit
 ```
 
-RESPONSE: 
-```json
-{"task_id":"de5dd6a9-21b6-490a-9bf5-cbb67c89112d"}
-```
+RESPONSE WILL BE A REDIRECT TO /output
+
+To go with:
+
+'''
+while true; do curl -s http://localhost/output; sleep 2; done
+'''
 
 But in the future, as soon as Sony authorizes, it will be directly in the PS4 browser. I promise.
 

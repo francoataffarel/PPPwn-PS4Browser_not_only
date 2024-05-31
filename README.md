@@ -90,9 +90,9 @@ RESPONSE WILL BE A REDIRECT TO /output
 
 To go with:
 
-'''
+```sh
 while true; do curl -s http://localhost/output; sleep 2; done
-'''
+```
 
 But in the future, as soon as Sony authorizes, it will be directly in the PS4 browser. I promise.
 
@@ -116,6 +116,5 @@ https://github.com/xfangfang/PPPwn_cpp/releases/tag/1.0.0
 
 ## TO DO
 
-- Display the result in real-time on the browser screen.
-- Display the result in real-time in the output of the command execution.
-- Create UML diagrams explaining the process.
+- [x] Display the result in real-time on the browser screen. (Done! via /output) 
+- []] Create UML diagrams explaining the process.

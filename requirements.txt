@@ -1,4 +1,2 @@
 flask
-celery
-redis
-scapy
+psutil

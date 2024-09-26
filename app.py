@@ -66,7 +66,7 @@ def run_pppwn():
             f.write(str(os.getpid()))
         command = [
             "/usr/local/bin/pppwn",
-            "--interface", "enp1s0",
+            "--interface", "eth0",
             "--fw", "1100",
             "--stage1", "/app/data/1100/stage1.bin",
             "--stage2", "/app/data/1100/stage2.bin",
